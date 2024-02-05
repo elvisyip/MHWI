@@ -1,0 +1,32 @@
+[
+  {
+    "type": "牙龍種",
+    "name": "大兇豺龍",
+    "fire": 3,
+    "water": 0,
+    "thunder": 2,
+    "ice": 2,
+    "dragon": 1,
+    "poison": 3,
+    "sleep": 3,
+    "paralysis": 3,
+    "explode": 3,
+    "coma": 3,
+    "remark": ""
+  },
+  {
+    "type": "牙龍種",
+    "name": "大兇顎龍",
+    "fire": 2,
+    "water": 3,
+    "thunder": 0,
+    "ice": 2,
+    "dragon": 1,
+    "poison": 2,
+    "sleep": 3,
+    "paralysis": 1,
+    "explode": 2,
+    "coma": 2,
+    "remark": ""
+  }
+]
