@@ -25,7 +25,7 @@ function showData() {
     readJson().then(function (value) {
         table = new Tabulator("#table", {
             height: "100%",
-            layout: "fitColumns",
+            layout: "fitDataFill",
             resizeableColumnFit: true,
             columnHeaderVertAlign: "bottom",
             data: data,
@@ -43,19 +43,21 @@ function showData() {
                     ]
                 },
                 {
-                    title: "彈藥剋制",
+                    title: "狀態異常",
                     columns: [
                         { title: "毒", field: "poison", width: 100, resizable: true, formatter: "star", formatterParams: { stars: 3 } },
-                        { title: "睡", sleep: "sleep", width: 100, resizable: true, formatter: "star", formatterParams: { stars: 3 } },
-                        { title: "麻", field: "paralysis", width: 100, resizable: true, formatter: "star", formatterParams: { stars: 3 } },
-                        { title: "爆", field: "explode", width: 100, resizable: true, formatter: "star", formatterParams: { stars: 3 } },
-                        { title: "昏", field: "coma", width: 100, resizable: true, formatter: "star", formatterParams: { stars: 3 } },
+                        { title: "睡眠", field: "sleep", width: 100, resizable: true, formatter: "star", formatterParams: { stars: 3 } },
+                        { title: "麻痺", field: "paralysis", width: 100, resizable: true, formatter: "star", formatterParams: { stars: 3 } },
+                        { title: "爆破", field: "explode", width: 100, resizable: true, formatter: "star", formatterParams: { stars: 3 } },
+                        { title: "昏厥", field: "coma", width: 100, resizable: true, formatter: "star", formatterParams: { stars: 3 } },
                     ]
                 },
-                { title: "備註", field: "remark", width: 100, resizable: true },
+                { title: "備註", field: "remark", resizable: true },
             ],
         });
+
+        // table.setFilter("type", "=", "鳥龍種");
     });
 
-
+    
 }
