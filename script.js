@@ -12,7 +12,7 @@ function readJson() {
         fetch("data.json").then(response => {
             return response.json();
         }).then(response => {
-            console.log(response);
+            // console.log(response);
 
             data = response;
             resolve();
