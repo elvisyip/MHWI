@@ -24,11 +24,13 @@ function showData() {
 
     readJson().then(function (value) {
         table = new Tabulator("#table", {
-            height: "100%",
+            // height: "500",
             layout: "fitDataFill",
             resizeableColumnFit: true,
             columnHeaderVertAlign: "bottom",
             data: data,
+            paginationSize: 10,
+            pagination:"local",
             columns: [
                 { title: "龍種", field: "type", width: 90, resizable: true, frozen: true },
                 { title: "魔物", field: "name", width: 120, resizable: true, frozen: true },
@@ -55,7 +57,7 @@ function showData() {
                 { title: "備註", field: "remark", resizable: true },
             ],
         });
-
+    
         // table.setFilter("type", "=", "鳥龍種");
     });
 
